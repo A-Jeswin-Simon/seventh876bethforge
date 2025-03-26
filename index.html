@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callsark - The Elite Platform</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1f0030, #000020);
+            color: #fff;
+            overflow-x: hidden;
+        }
+        header {
+            text-align: center;
+            padding: 2rem;
+            background-color: rgba(31, 0, 48, 0.85);
+        }
+        header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            color: #ffd700;
+            animation: glow 2s infinite alternate;
+        }
+        header p {
+            font-size: 1.4rem;
+            color: #fff;
+        }
+        @keyframes glow {
+            from { text-shadow: 0 0 20px #ffd700; }
+            to { text-shadow: 0 0 50px #ffd700; }
+        }
+        .button {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 1rem 2.5rem;
+            font-size: 1.4rem;
+            color: #1f0030;
+            background-color: #ffd700;
+            border: none;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 20px rgba(255, 215, 0, 0.4);
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #fff;
+            color: #1f0030;
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(255, 215, 0, 0.6);
+        }
+        .announcement, .highlight-message {
+            background-color: rgba(31, 0, 48, 0.7);
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 2rem;
+            text-align: center;
+        }
+        .announcement h2, .highlight-message h2 {
+            color: #ffd700;
+        }
+        .announcement p a {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+        .moving-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        .moving-background img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 1rem;
+            font-size: 0.9rem;
+            color: #bbb;
+        }
+        .cta-section {
+            text-align: center;
+            margin: 3rem;
+        }
+        .telegram-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .telegram-buttons .button {
+            margin: 0.5rem;
+            background: linear-gradient(45deg, #ffd700, #ffb300);
+            font-weight: bold;
+        }
+        .visitor-count {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 1.2rem;
+            color: #ffd700;
+        }
+    </style>
+</head>
+<body>
+<div class="moving-background">
+    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTE2eGJ4MnMzMjk0b2F5czRuczJ4M3IyOWVlaDF5eGwzdHg5aWdkZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7VzgMsB6FLCilwS30v/giphy.gif" alt="Futuristic moving background">
+</div>
+<header>
+    <h1>Callsark</h1>
+    <p>The future of elite networking and innovation.</p>
+</header>
+<div class="announcement">
+    <h2>🚀 The Journey Begins</h2>
+    <p>Step into an environment designed for visionaries and changemakers. Connect, collaborate, and build the future.</p>
+    <p>Follow us for exclusive updates on our <a href="https://t.me/panimalarNT" target="_blank">Telegram Channel</a>.</p>
+</div>
+<div class="highlight-message">
+    <h2>🌟 Innovation. Vision. Impact.</h2>
+    <p>We are shaping the future one idea at a time. Be part of this elite movement.</p>
+</div>
+<div class="cta-section">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc4yZvnHeZSQHWbyziUgQxPPOxx674hOo_zhq8MQDEnLNnPvA/viewform?usp=dialog" target="_blank" class="button">Join Callsark Now</a>
+</div>
+<div class="telegram-buttons">
+    <a href="https://t.me/NThelperbotbot" target="_blank" class="button">🤖 Talk to Our Telegram Bot</a>
+    <a href="https://t.me/panimalarNT" target="_blank" class="button">📢 Join Our Telegram Channel</a>
+</div>
+<div class="visitor-count">
+    Total Visitors: <span id="visitorCount">Loading...</span>
+</div>
+<footer>
+    &copy; 2025 Callsark. All rights reserved.
+</footer>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const countElement = document.getElementById("visitorCount");
+        // Dummy logic for demonstration; replace with backend or analytics call
+        const count = Math.floor(Math.random() * 10000) + 1000; 
+        countElement.textContent = count;
+    });
+</script>
+</body>
+</html>
