@@ -33,31 +33,24 @@
             to { text-shadow: 0 0 50px #ffd700; }
         }
         .button {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
+            display: inline-block;
             margin-top: 1.5rem;
-            padding: 1.2rem 3rem;
-            font-size: 1.6rem;
-            font-weight: bold;
+            padding: 1rem 2.5rem;
+            font-size: 1.4rem;
             color: #1f0030;
-            background: linear-gradient(45deg, #ffd700, #ffb300);
+            background-color: #ffd700;
             border: none;
-            border-radius: 50px;
+            border-radius: 40px;
             cursor: pointer;
             transition: all 0.4s ease;
-            box-shadow: 0 6px 25px rgba(255, 215, 0, 0.6);
+            box-shadow: 0 4px 20px rgba(255, 215, 0, 0.4);
             text-decoration: none;
-        }
-        .button img {
-            width: 28px;
-            height: 28px;
         }
         .button:hover {
             background-color: #fff;
             color: #1f0030;
-            transform: scale(1.15);
-            box-shadow: 0 8px 35px rgba(255, 215, 0, 0.8);
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(255, 215, 0, 0.6);
         }
         .announcement, .highlight-message {
             background-color: rgba(31, 0, 48, 0.7);
@@ -93,8 +86,7 @@
             padding: 1rem;
             font-size: 0.9rem;
             color: #bbb;
-            background-color: rgba(31, 0, 48, 0.85);
-            border-top: 4px solid rgba(255, 255, 255, 0.5);
+            border-top: 4px solid rgba(255, 255, 255, 0.3);
         }
         .cta-section {
             text-align: center;
@@ -116,6 +108,23 @@
             margin-top: 2rem;
             font-size: 1.2rem;
             color: #ffd700;
+        }
+        .footer-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+        .footer-buttons .button {
+            padding: 0.8rem 1.8rem;
+            font-size: 1rem;
+        }
+        .footer-buttons img {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 8px;
         }
     </style>
 </head>
@@ -140,15 +149,15 @@
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSc4yZvnHeZSQHWbyziUgQxPPOxx674hOo_zhq8MQDEnLNnPvA/viewform?usp=dialog" target="_blank" class="button">Join NTpanimalar Now</a>
 </div>
 <footer>
-    <div class="telegram-buttons">
+    <div class="footer-buttons">
         <a href="https://t.me/NThelperbotbot" target="_blank" class="button">
-            🤖 Talk to Our Telegram Bot
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram"> 🤖 Talk to Our Telegram Bot
         </a>
         <a href="https://t.me/panimalarNT" target="_blank" class="button">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram"> Join Our Telegram Channel
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram"> 📢 Join Our Telegram Channel
         </a>
     </div>
-    <p>Contact us: <a href="mailto:ntteam855@gmail.com" style="color: #ffd700; text-decoration: none;">ntteam855@gmail.com</a></p>
+    <p>Contact us: <a href="mailto:ntteam855@gmail.com">ntteam855@gmail.com</a></p>
 </footer>
 </body>
 </html>
