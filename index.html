@@ -33,24 +33,31 @@
             to { text-shadow: 0 0 50px #ffd700; }
         }
         .button {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
             margin-top: 1.5rem;
-            padding: 1rem 2.5rem;
-            font-size: 1.4rem;
+            padding: 1.2rem 3rem;
+            font-size: 1.6rem;
+            font-weight: bold;
             color: #1f0030;
-            background-color: #ffd700;
+            background: linear-gradient(45deg, #ffd700, #ffb300);
             border: none;
-            border-radius: 40px;
+            border-radius: 50px;
             cursor: pointer;
             transition: all 0.4s ease;
-            box-shadow: 0 4px 20px rgba(255, 215, 0, 0.4);
+            box-shadow: 0 6px 25px rgba(255, 215, 0, 0.6);
             text-decoration: none;
+        }
+        .button img {
+            width: 28px;
+            height: 28px;
         }
         .button:hover {
             background-color: #fff;
             color: #1f0030;
-            transform: scale(1.1);
-            box-shadow: 0 6px 30px rgba(255, 215, 0, 0.6);
+            transform: scale(1.15);
+            box-shadow: 0 8px 35px rgba(255, 215, 0, 0.8);
         }
         .announcement, .highlight-message {
             background-color: rgba(31, 0, 48, 0.7);
@@ -86,6 +93,8 @@
             padding: 1rem;
             font-size: 0.9rem;
             color: #bbb;
+            background-color: rgba(31, 0, 48, 0.85);
+            border-top: none;
         }
         .cta-section {
             text-align: center;
@@ -130,10 +139,16 @@
 <div class="cta-section">
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSc4yZvnHeZSQHWbyziUgQxPPOxx674hOo_zhq8MQDEnLNnPvA/viewform?usp=dialog" target="_blank" class="button">Join NTpanimalar Now</a>
 </div>
-<div class="telegram-buttons">
-    <a href="https://t.me/NThelperbotbot" target="_blank" class="button">🤖 Talk to Our Telegram Bot</a>
-    <a href="https://t.me/panimalarNT" target="_blank" class="button">📢 Join Our Telegram Channel</a>
-</div>
-
+<footer>
+    <div class="telegram-buttons">
+        <a href="https://t.me/NThelperbotbot" target="_blank" class="button">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram"> Talk to Our Telegram Bot
+        </a>
+        <a href="https://t.me/panimalarNT" target="_blank" class="button">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram"> Join Our Telegram Channel
+        </a>
+    </div>
+    <p>Contact us: <a href="mailto:ntteam855@gmail.com" style="color: #ffd700; text-decoration: none;">ntteam855@gmail.com</a></p>
+</footer>
 </body>
 </html>
