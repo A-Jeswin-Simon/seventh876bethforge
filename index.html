@@ -102,8 +102,13 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            animation: backgroundAnimation 10s linear infinite;
         }
-        /* Placeholder for right-to-left scrolling effect */
+        @keyframes backgroundAnimation {
+            0% { transform: scale(1) translateY(0); }
+            50% { transform: scale(1.1) translateY(-10%); }
+            100% { transform: scale(1) translateY(0); }
+        }
         .scrolling-container {
             width: 100%;
             overflow: hidden;
@@ -187,6 +192,91 @@
             margin-right: 8px;
         }
 
+        /* Popup styles */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+        .popup-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            animation: popup-animation 0.5s ease-out;
+        }
+        @keyframes popup-animation {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        .popup-message {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+        .loading-bar {
+            width: 80%;
+            background-color: #ddd;
+            margin: 20px auto;
+            border-radius: 25px;
+            overflow: hidden;
+        }
+        .loading-bar-inner {
+            width: 0;
+            height: 20px;
+            background-color: #28a745;
+            animation: loading 5s linear forwards;
+        }
+        @keyframes loading {
+            0% { width: 0; }
+            100% { width: 100%; }
+        }
+        .continue-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .continue-btn:hover {
+            background-color: #218838;
+        }
+
+        /* Reveal section styles */
+        #revealSection {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+            background-color: rgba(31, 0, 48, 0.85);
+            border-radius: 20px;
+            margin: 2rem;
+            animation: reveal-animation 1s ease-out;
+        }
+        @keyframes reveal-animation {
+            0% {
+                opacity: 0;
+                transform: translateY(20%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         /* Media query for mobile screens */
         @media (max-width: 600px) {
             nav {
@@ -202,7 +292,7 @@
 </head>
 <body>
 <div class="moving-background">
-    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTE2eGJ4MnMzMjk0b2F5czRuczJ4M3IyOWVlaDF5eGwzdHg5aWdkZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7VzgMsB6FLCilwS30v/giphy.gif" alt="Background">
+    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTE2eGJ4MnMzMjk0b2F5czRuczJ4M3IyOWVlaDF5eGwzdHg5aWdkZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7VzgMsB6FLCilwS30v/giphy.gif" alt="Background Animation">
 </div>
 <nav>
     <a href="#overview">Overview</a>
@@ -230,7 +320,7 @@
 </div>
 <div id="overview" class="new-section">
     <h2>Event Overview</h2>
-    <p>"A cutting-edge ecosystem designed to catalyze high-impact synergies, this initiative orchestrates a confluence of emergent intellect, avant-garde problem solvers, and disruptive innovators. Join us to be part of the change."</p>
+    <p>"A cutting-edge ecosystem designed to catalyze high-impact synergies, this initiative orchestrates a confluence of emergent intellect, avant-garde problem solvers, and disruptive innovators."</p>
     <a href="read_more.html" class="button">Read More</a>
 </div>
 <div class="scrolling-container">
@@ -238,7 +328,7 @@
 </div>
 <div id="engagement" class="new-section">
     <h2>Participant Engagement</h2>
-    <p>"Membership operates on a structured, high-value engagement model that transcends conventional ideation platforms. Here, participants are strategically positioned within an ecosystem that fosters sustained intellectual capital exchange."</p>
+    <p>"Membership operates on a structured, high-value engagement model that transcends conventional ideation platforms. Here, participants are strategically positioned within an ecosystem that optimizes peer-to-peer alignment."</p>
 </div>
 <div class="scrolling-container">
     <div class="scrolling-text">Structured engagement model | Optimized peer-to-peer alignment | Sustained intellectual capital exchange</div>
@@ -252,7 +342,7 @@
 </div>
 <div id="selection" class="new-section">
     <h2>Selection & Exclusivity</h2>
-    <p>"Access is not transactional; it is a function of intellectual compatibility, behavioral metrics, and ecosystem-driven potential. This isn’t about mere participation—it’s about integration."</p>
+    <p>"Access is not transactional; it is a function of intellectual compatibility, behavioral metrics, and ecosystem-driven potential. This isn’t about mere participation—it’s about integral engagement."</p>
 </div>
 <div class="scrolling-container">
     <div class="scrolling-text">Intellectual compatibility | Behavioral metrics | Ecosystem-driven potential</div>
@@ -266,10 +356,26 @@
 </div>
 <div id="call-to-action" class="new-section">
     <h2>Final Call-to-Action</h2>
-    <p>"This is not an event. It is an operational construct—an evolutionary intelligence layer within the fabric of professional acceleration. The few who gain access will not merely participate; they will integrate and innovate."</p>
+    <p>"This is not an event. It is an operational construct—an evolutionary intelligence layer within the fabric of professional acceleration. The few who gain access will not merely participate; they will drive this evolution."</p>
 </div>
 <div class="cta-section">
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc4yZvnHeZSQHWbyziUgQxPPOxx674hOo_zhq8MQDEnLNnPvA/viewform?usp=dialog" target="_blank" class="button">Join NTpanimalar Now</a>
+    <button id="joinButton" class="button">Join NTpanimalar Now</button>
+</div>
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <div id="popupMessage" class="popup-message">You're about to step into something truly transformative. Only a select few will make it through. Are you ready?</div>
+        <button id="proceedButton" class="continue-btn">Proceed</button>
+    </div>
+</div>
+<div id="revealSection" class="new-section">
+    <h2>Verifying your eligibility...</h2>
+    <div class="loading-bar">
+        <div class="loading-bar-inner"></div>
+    </div>
+    <div id="eligibilityMessage" style="display:none;">
+        <h2>You are about to enter the NTpanimalar Inner Circle.</h2>
+        <a id="formLink" href="https://docs.google.com/forms/d/e/1FAIpQLSc4yZvnHeZSQHWbyziUgQxPPOxx674hOo_zhq8MQDEnLNnPvA/viewform" target="_blank" class="button">Proceed to Google Form</a>
+    </div>
 </div>
 <footer>
     <div class="footer-buttons">
@@ -282,5 +388,18 @@
     </div>
     <p>Contact us: <a href="mailto:ntteam855@gmail.com">ntteam855@gmail.com</a></p>
 </footer>
+<script>
+    document.getElementById('joinButton').addEventListener('click', function() {
+        document.getElementById('popup').style.display = 'flex';
+    });
+
+    document.getElementById('proceedButton').addEventListener('click', function() {
+        document.getElementById('popup').style.display = 'none';
+        document.getElementById('revealSection').style.display = 'block';
+        setTimeout(function() {
+            document.getElementById('eligibilityMessage').style.display = 'block';
+        }, 5000); // Match the duration of the loading animation
+    });
+</script>
 </body>
 </html>
