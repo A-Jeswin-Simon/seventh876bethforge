@@ -280,6 +280,20 @@
             }
         }
 
+        /* Timer window styles */
+        .timer-window {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(31, 0, 48, 0.85);
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            color: #ffd700;
+        }
+
         /* Media query for mobile screens */
         @media (max-width: 600px) {
             nav {
@@ -333,7 +347,7 @@
 </div>
 <div id="engagement" class="new-section">
     <h2>Participant Engagement</h2>
-    <p>"Membership operates on a structured, high-value engagement model that transcends conventional ideation platforms. Here, participants are strategically positioned within an ecosystem that facilitates sustained intellectual capital exchange."</p>
+    <p>"Membership operates on a structured, high-value engagement model that transcends conventional ideation platforms. Here, participants are strategically positioned within an ecosystem that fosters sustained intellectual capital exchange.</p>
     <a href="read_more.html" class="button">Read More</a>
 </div>
 <div class="scrolling-container">
@@ -341,7 +355,7 @@
 </div>
 <div id="why-us" class="new-section">
     <h2>Why This Platform?</h2>
-    <p>"In a saturated landscape of passive conferences and static networking events, this emerges as an intelligence-driven, sentient market construct—a space where interactions are non-linear, organically evolving, and long-term impact driven."</p>
+    <p>"In a saturated landscape of passive conferences and static networking events, this emerges as an intelligence-driven, sentient market construct—a space where interactions are non-linear and organically evolving.</p>
     <a href="read_more.html" class="button">Read More</a>
 </div>
 <div class="scrolling-container">
@@ -349,7 +363,7 @@
 </div>
 <div id="selection" class="new-section">
     <h2>Selection & Exclusivity</h2>
-    <p>"Access is not transactional; it is a function of intellectual compatibility, behavioral metrics, and ecosystem-driven potential. This isn’t about mere participation—it’s about integrated, high-value engagement."</p>
+    <p>"Access is not transactional; it is a function of intellectual compatibility, behavioral metrics, and ecosystem-driven potential. This isn’t about mere participation—it’s about integration into a dynamic, high-value network.</p>
     <a href="read_more.html" class="button">Read More</a>
 </div>
 <div class="scrolling-container">
@@ -357,7 +371,7 @@
 </div>
 <div id="beyond-networking" class="new-section">
     <h2>Beyond Traditional Networking</h2>
-    <p>"Unlike traditional networking, this is engineered as a self-sustaining knowledge mesh—an interconnected matrix of high-agency individuals navigating an ever-evolving space of emergent collaboration and curated interaction velocity."</p>
+    <p>"Unlike traditional networking, this is engineered as a self-sustaining knowledge mesh—an interconnected matrix of high-agency individuals navigating an ever-evolving space of emergent collaboration.</p>
     <a href="read_more.html" class="button">Read More</a>
 </div>
 <div class="scrolling-container">
@@ -365,7 +379,7 @@
 </div>
 <div id="call-to-action" class="new-section">
     <h2>Final Call-to-Action</h2>
-    <p>"This is not an event. It is an operational construct—an evolutionary intelligence layer within the fabric of professional acceleration. The few who gain access will not merely participate; they will lead, innovate, and transform."</p>
+    <p>"This is not an event. It is an operational construct—an evolutionary intelligence layer within the fabric of professional acceleration. The few who gain access will not merely participate; they will lead.</p>
 </div>
 <div class="cta-section">
     <button id="joinButton" class="button">Join NTpanimalar Now</button>
@@ -375,6 +389,10 @@
         <div id="popupMessage" class="popup-message">You're about to step into something truly transformative. Only a select few will make it through. Are you ready?</div>
         <button id="proceedButton" class="continue-btn">Proceed</button>
     </div>
+</div>
+<!-- Timer Window Section -->
+<div id="timerWindow" class="timer-window">
+    <p>Redirecting in <span id="countdown">5</span> seconds...</p>
 </div>
 <div id="revealSection" class="new-section">
     <h2>Verifying your eligibility...</h2>
@@ -406,7 +424,21 @@
         document.getElementById('popup').style.display = 'none';
         document.getElementById('revealSection').style.display = 'block';
         setTimeout(function() {
-            document.getElementById('eligibilityMessage').style.display = 'block';
+            // Show timer window
+            document.getElementById('timerWindow').style.display = 'block';
+            var countdown = 5; // Change to 3 for a 3-second countdown
+            var countdownElement = document.getElementById('countdown');
+            var timer = setInterval(function() {
+                countdown--;
+                countdownElement.textContent = countdown;
+                if (countdown <= 0) {
+                    clearInterval(timer);
+                    // Hide timer window
+                    document.getElementById('timerWindow').style.display = 'none';
+                    // Show the proceed button
+                    document.getElementById('eligibilityMessage').style.display = 'block';
+                }
+            }, 1000);
         }, 5000); // Match the duration of the loading animation
     });
 </script>
