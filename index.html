@@ -5,13 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NTpanimalar - The Elite Platform</title>
     <style>
-        body {
+        /* CSS Reset */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #1f0030, #000020);
             color: #fff;
             overflow-x: hidden;
+        }
+        .blurred {
+            filter: blur(5px);
+            pointer-events: none;
         }
         nav {
             background-color: rgba(31, 0, 48, 0.85);
@@ -294,6 +303,35 @@
             color: #ffd700;
         }
 
+        /* Prominent button styles */
+        .prominent-button {
+            background-color: #ff4500; /* Bright red background */
+            color: #fff; /* White text */
+            font-size: 1.8rem; /* Larger font size */
+            padding: 1.2rem 3rem; /* Larger padding */
+            border-radius: 50px; /* Rounded corners */
+            box-shadow: 0 8px 30px rgba(255, 69, 0, 0.7); /* Box shadow for emphasis */
+            animation: pulse 1s infinite alternate; /* Pulsing animation */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            display: none;
+        }
+
+        /* Pulsing animation */
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+                box-shadow: 0 8px 30px rgba(255, 69, 0, 0.7);
+            }
+            to {
+                transform: scale(1.1);
+                box-shadow: 0 10px 40px rgba(255, 69, 0, 1);
+            }
+        }
+
         /* Media query for mobile screens */
         @media (max-width: 600px) {
             nav {
@@ -309,7 +347,7 @@
 </head>
 <body>
 <div class="moving-background">
-    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTE2eGJ4MnMzMjk0b2F5czRuczJ4M3IyOWVlaDF5eGwzdHg5aWdkZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7VzgMsB6FLCilwS30v/giphy.gif" alt="Background">
+    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTE2eGJ4MnMzMjk0b2F5czRuczJ4M3IyOWVlaDF5eGwzdHg5aWdkZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7VzgMsB6FLCilwS30v/giphy.gif" alt="Background Animation">
 </div>
 <nav>
     <a href="#overview">Overview</a>
@@ -347,7 +385,7 @@
 </div>
 <div id="engagement" class="new-section">
     <h2>Participant Engagement</h2>
-    <p>"Membership operates on a structured, high-value engagement model that transcends conventional ideation platforms. Here, participants are strategically positioned within an ecosystem that fosters sustained intellectual capital exchange.</p>
+    <p>"Membership operates on a structured, high-value engagement model that transcends conventional ideation platforms. Here, participants are strategically positioned within an ecosystem that fosters...</p>
     <a href="read_more.html" class="button">Read More</a>
 </div>
 <div class="scrolling-container">
@@ -362,8 +400,8 @@
     <div class="scrolling-text">Intelligence-driven market construct | Non-linear and organically evolving interactions | Long-term impact</div>
 </div>
 <div id="selection" class="new-section">
-    <h2>Selection & Exclusivity</h2>
-    <p>"Access is not transactional; it is a function of intellectual compatibility, behavioral metrics, and ecosystem-driven potential. This isn’t about mere participation—it’s about integration into a dynamic, high-value network.</p>
+    <h2>Selection & Exclusivity</</h2>
+    <p>"Access is not transactional; it is a function of intellectual compatibility, behavioral metrics, and ecosystem-driven potential. This isn’t about mere participation—it’s about integration.</p>
     <a href="read_more.html" class="button">Read More</a>
 </div>
 <div class="scrolling-container">
@@ -379,7 +417,7 @@
 </div>
 <div id="call-to-action" class="new-section">
     <h2>Final Call-to-Action</h2>
-    <p>"This is not an event. It is an operational construct—an evolutionary intelligence layer within the fabric of professional acceleration. The few who gain access will not merely participate; they will lead.</p>
+    <p>"This is not an event. It is an operational construct—an evolutionary intelligence layer within the fabric of professional acceleration. The few who gain access will not merely participate; they will...</p>
 </div>
 <div class="cta-section">
     <button id="joinButton" class="button">Join NTpanimalar Now</button>
@@ -401,7 +439,6 @@
     </div>
     <div id="eligibilityMessage" style="display:none;">
         <h2 class="fade-in">You are about to enter the NTpanimalar Inner Circle.</h2>
-        <a id="formLink" href="https://docs.google.com/forms/d/e/1FAIpQLSc4yZvnHeZSQHWbyziUgQxPPOxx674hOo_zhq8MQDEnLNnPvA/viewform" target="_blank" class="button">Proceed to Google Form</a>
     </div>
 </div>
 <footer>
@@ -415,6 +452,8 @@
     </div>
     <p>Contact us: <a href="mailto:ntteam855@gmail.com">ntteam855@gmail.com</a></p>
 </footer>
+<!-- Prominent Button -->
+<a id="formLink" href="https://sites.google.com/view/ntpanimalar/home" target="_blank" class="button prominent-button">Proceed to Google Form</a>
 <script>
     document.getElementById('joinButton').addEventListener('click', function() {
         document.getElementById('popup').style.display = 'flex';
@@ -435,8 +474,12 @@
                     clearInterval(timer);
                     // Hide timer window
                     document.getElementById('timerWindow').style.display = 'none';
+                    // Blur the rest of the content
+                    document.querySelectorAll('body > :not(.prominent-button)').forEach(element => {
+                        element.classList.add('blurred');
+                    });
                     // Show the proceed button
-                    document.getElementById('eligibilityMessage').style.display = 'block';
+                    document.querySelector('.prominent-button').style.display = 'block';
                 }
             }, 1000);
         }, 5000); // Match the duration of the loading animation
