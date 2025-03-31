@@ -305,20 +305,21 @@
 
         /* Prominent button styles */
         .prominent-button {
-            background-color: #ff4500; /* Bright red background */
-            color: #fff; /* White text */
-            font-size: 1.8rem; /* Larger font size */
-            padding: 0.2rem 1rem; /* Larger padding */
-            border-radius: 50px; /* Rounded corners */
-            box-shadow: 0 8px 30px rgba(255, 69, 0, 0.7); /* Box shadow for emphasis */
-            animation: pulse 1s infinite alternate; /* Pulsing animation */
-            position: fixed;
-            top: 50%;
-            left: 34%;
-            transform: translate(-50%, -50%);
-            z-index: 9999;
-            display: none;
-        }
+    background-color: #ff4500; /* Bright red background */
+    color: #fff; /* White text */
+    font-size: 1.8rem; /* Larger font size */
+    padding: 1.2rem 3rem; /* Larger padding */
+    border-radius: 0; /* Remove rounded corners */
+    box-shadow: 0 8px 30px rgba(255, 69, 0, 0.7); /* Box shadow for emphasis */
+    animation: pulse 1s infinite alternate; /* Pulsing animation */
+    position: fixed;
+    top: 50%;
+    left: 0;
+    width: 100%; /* Make the button full width */
+    text-align: center; /* Center the text */
+    z-index: 9999;
+    display: none;
+}
 
         /* Pulsing animation */
         @keyframes pulse {
