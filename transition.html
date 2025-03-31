@@ -16,7 +16,9 @@
         .transition-gif {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Cover the entire page */
+            max-width: 100vw;
+            max-height: 100vh;
+            object-fit: contain; /* Contain within the view */
         }
     </style>
 </head>
