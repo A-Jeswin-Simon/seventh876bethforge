@@ -50,51 +50,137 @@
             height: 100%;
             object-fit: cover;
         }
+        .toggle-section {
+            margin: 1rem 0;
+        }
+        .toggle-header {
+            background-color: #ffd700;
+            color: #1f0030;
+            padding: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .toggle-header:hover {
+            background-color: #fff;
+        }
+        .toggle-content {
+            display: none;
+            padding: 1rem;
+            border-left: 4px solid #ffd700;
+            margin-top: 0.5rem;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
     </style>
 </head>
 <body>
 <div class="moving-background">
-    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTE2eGJ4MnMzMjk0b2F5czRuczJ4M3IyOWVlaDF5eGwzdHg5aWdkZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7VzgMsB6FLCilwS30v/giphy.gif" alt="Background Video">
+    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTE2eGJ4MnMzMjk0b2F5czRuczJ4M3IyOWVlaDF5eGwzdHg5aWdkZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7VzgMsB6FLCilwS30v/giphy.gif" alt="Background Animation">
 </div>
 <div class="content">
     <h2>Callsark: Redefining High-Impact Networking</h2>
-    <h3>A Revolution in Meaningful Connections</h3>
-    <p>The modern world demands more than just casual networking—it requires strategic, high-value interactions that can shape careers, businesses, and groundbreaking innovations. Callsark is not just a platform; it's a revolution in meaningful connections.</p>
-    <p>Where most networking platforms rely on transactional exchanges, Callsark <strong>facilitates long-term relationships, impactful collaborations, and a sustained ecosystem of opportunity.</strong></p>
-    <h3>Why Callsark?</h3>
-    <p>Traditional networking often feels forced, inefficient, and superficial. Callsark eliminates these pitfalls by <strong>curating connections intelligently</strong> rather than leaving them to chance.</p>
-    <p>We believe that the best opportunities arise not from scripted interactions but from a carefully designed environment that ensures individuals meet the right people at the right time. This is the essence of Callsark.</p>
-    <h3>Who is Callsark For?</h3>
-    <p>Callsark is a platform tailored for individuals who recognize the power of relationships in shaping their future. While it welcomes diverse minds from various disciplines, it particularly suits those who:</p>
-    <ul>
-        <li><strong>Value depth over breadth</strong> in their professional and personal networks.</li>
-        <li>Seek an ecosystem where their ideas can gain <strong>traction, validation, and support.</strong></li>
-        <li>Aspire to be part of an <strong>elite, forward-thinking community</strong> that fosters serious innovation.</li>
-    </ul>
-    <p>We have a particular focus on <strong>first-year engineering students</strong> who display interdisciplinary interests beyond just their technical expertise. These individuals bring fresh perspectives and a desire to innovate.</p>
-    <h3>The Callsark Methodology</h3>
-    <p>Callsark is not built on chance encounters or rigid matchmaking. Instead, it leverages an <strong>adaptive networking model</strong> that ensures each participant finds themselves in an environment conducive to forming genuine, impactful connections.</p>
-    <p>Our approach is based on <strong>organic evolution within a structured framework</strong>—a philosophy that ensures participants form connections that are both natural and meaningful. Through this, Callsark creates a lasting impact on its members.</p>
-    <p>This is not a one-size-fits-all approach. Callsark acknowledges that each participant brings unique strengths, interests, and ambitions. Rather than forcing artificial engagements, the platform nurtures organic interactions that lead to meaningful relationships.</p>
-    <h3>Beyond the Event: A Lasting Ecosystem</h3>
-    <p>Unlike conventional networking events that begin and end within a fixed timeframe, Callsark functions as a <strong>continuum of engagement</strong>. Participants do not merely attend an event—they become part of an ongoing journey of growth and innovation.</p>
-    <p>The experience does not stop at a single interaction. Callsark fosters an environment where connections are nurtured over time, allowing ideas to <strong>mature, evolve, and ultimately transform into tangible outcomes.</strong></p>
-    <p>We emphasize exclusivity not for the sake of restriction, but to maintain <strong>quality interactions</strong> and ensure that every participant experiences tangible value. Callsark is <strong>about quality over quantity, depth over breadth.</strong></p>
-    <h3>What Callsark is Not</h3>
-    <p>To clarify, Callsark is not a <strong>speed-networking event</strong>, nor is it a <strong>traditional business pitching competition</strong>. It is also not a space where ideas are freely exchanged without structure. Instead, Callsark is a carefully curated environment where meaningful connections are made.</p>
-    <p>Callsark does not operate on rigid matchmaking algorithms or automated filtering. Instead, it relies on <strong>subtle but powerful structuring</strong> that allows relationships to form naturally and effectively.</p>
-    <h3>The Future of Callsark</h3>
-    <p>Callsark is not just a platform—it is a <strong>movement</strong> that is set to expand in ways that preserve its essence while scaling its influence. As we grow, we remain committed to maintaining the quality and integrity of our community.</p>
-    <p>As we look ahead, Callsark envisions an evolution that integrates new dimensions of engagement. This includes:</p>
-    <ul>
-        <li><strong>Expanding our network</strong> to bring in a more diverse set of participants without compromising quality.</li>
-        <li><strong>Building a legacy</strong> where Callsark alumni become mentors, sponsors, and visionaries who shape the next generation of talent.</li>
-        <li><strong>Leveraging insights</strong> from our carefully designed interactions to refine and enhance the networking experience continuously.</li>
-    </ul>
-    <p>The ultimate goal is to establish Callsark as an enduring institution where networking is more than an activity—it becomes an <strong>ecosystem for opportunity and innovation.</strong></p>
-    <p>In a world filled with noise, Callsark stands as a signal—an opportunity to be part of something truly transformative. If you are ready to step into an environment where networking is engineered for impact, Callsark welcomes you.</p>
-    <p>Welcome to the future of high-impact networking. Welcome to Callsark.</p>
+    <div class="toggle-section">
+        <div class="toggle-header">What is Callsark?</div>
+        <div class="toggle-content">
+            <p>Callsark is a structured engagement platform designed to foster high-value interactions, collaboration, and long-term opportunities. It goes beyond traditional networking by creating an environment where ideas, talent, and ambition converge with purpose.</p>
+            <p>Unlike conventional networking events, Callsark is not just about making contacts—it’s about enabling strategic connections that lead to tangible outcomes.</p>
+        </div>
+    </div>
+    <div class="toggle-section">
+        <div class="toggle-header">Why Callsark?</div>
+        <div class="toggle-content">
+            <p>Many professional events focus on transactional exchanges or one-time interactions that rarely lead to meaningful progress. Callsark takes a different approach by:</p>
+            <ul>
+                <li>✔ Curating connections intelligently rather than relying on chance.</li>
+                <li>✔ Providing a structured yet flexible framework where interactions lead to action.</li>
+                <li>✔ Focusing on long-term impact, ensuring participants leave with more than just a list of contacts.</li>
+            </ul>
+            <p>At Callsark, the objective is not just to meet people—it is to align individuals with shared goals, complementary skill sets, and real opportunities for collaboration.</p>
+        </div>
+    </div>
+    <div class="toggle-section">
+        <div class="toggle-header">Who is Callsark For?</div>
+        <div class="toggle-content">
+            <p>Callsark is designed for individuals who seek to make the most of their time and abilities by engaging in purpose-driven interactions.</p>
+            <ul>
+                <li>✔ Early-stage professionals and students who recognize that strategic relationships are key to their growth.</li>
+                <li>✔ Individuals with a vision, looking to validate and refine their ideas through constructive dialogue.</li>
+                <li>✔ Those who want to collaborate on projects, not just network for the sake of expanding a contact list.</li>
+            </ul>
+            <p>While the platform is open to various disciplines, Callsark has a particular focus on first-year engineering students who bring diverse perspectives beyond their technical backgrounds.</p>
+        </div>
+    </div>
+    <div class="toggle-section">
+        <div class="toggle-header">The Callsark Framework</div>
+        <div class="toggle-content">
+            <p>Callsark operates on a structured engagement model that ensures participants interact in a way that is both organic and effective.</p>
+            <ul>
+                <li>🔹 Facilitated Interactions – Thoughtfully designed to ensure participants connect with relevant individuals without forced matchmaking.</li>
+                <li>🔹 Controlled Growth – Callsark maintains an optimal participant mix to ensure a high-value environment rather than overcrowding.</li>
+                <li>🔹 Sustained Engagement – The platform extends beyond a single event, providing avenues for ongoing collaboration and progress.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="toggle-section">
+        <div class="toggle-header">What Makes Callsark Unique?</div>
+        <div class="toggle-content">
+            <ul>
+                <li>🔹 A Focus on Outcomes, Not Just Interactions – Callsark is structured to ensure that conversations lead to action.</li>
+                <li>🔹 Strategic Participant Curation – The environment is carefully managed to ensure that interactions are high-value and productive.</li>
+                <li>🔹 A Long-Term Perspective – Callsark is not a one-time event; it is a system designed to evolve with its participants.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="toggle-section">
+        <div class="toggle-header">What Callsark is NOT</div>
+        <div class="toggle-content">
+            <ul>
+                <li>❌ A casual networking event – Every interaction is structured for impact.</li>
+                <li>❌ A competition – It is about collaboration, not rivalry.</li>
+                <li>❌ A passive experience – Participants are expected to engage actively and contribute meaningfully.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="toggle-section">
+        <div class="toggle-header">Incentives & Opportunities</div>
+        <div class="toggle-content">
+            <p>Callsark ensures that participation is not just about engagement—it also offers tangible incentives for those who actively contribute to the platform's success.</p>
+            <ul>
+                <li>🔹 Exclusive Internship & Mentorship Opportunities – Outstanding participants will gain access to internship placements and mentorship programs with industry leaders and entrepreneurs.</li>
+                <li>🔹 Cash Prizes & Recognition – Those who make significant contributions to Callsark’s growth and ecosystem will be rewarded through financial incentives and public recognition within the community.</li>
+                <li>🔹 Priority Access to Future Initiatives – Callsark is designed to expand and evolve. Early and high-performing participants will receive priority invitations to future programs, exclusive networking circles, and advanced engagement opportunities.</li>
+                <li>🔹 Project Support & Sponsorships – For individuals or teams who showcase exceptional ideas or initiatives, Callsark provides a pathway to funding, sponsorships, and resource support to help bring their visions to life.</li>
+                <li>🔹 Long-Term Community & Alumni Benefits – Callsark is not just an event but a movement. Participants who demonstrate active engagement will become part of an elite community with access to exclusive industry connections, high-level collaborations, and opportunities beyond the initial engagement period.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="toggle-section">
+        <div class="toggle-header">Beyond the Event: The Future of Callsark</div>
+        <div class="toggle-content">
+            <p>Callsark is not just an initiative—it is a platform for continuous engagement. As it evolves, it will:</p>
+            <ul>
+                <li>✔ Expand its participant base while maintaining exclusivity and impact.</li>
+                <li>✔ Introduce structured pathways for collaboration, mentorship, and resource-sharing.</li>
+                <li>✔ Create a legacy where participants continue to benefit long after their first engagement.</li>
+            </ul>
+            <p>Callsark is built for those who seek to engage meaningfully, collaborate effectively, and build relationships that drive real-world outcomes.</p>
+        </div>
+    </div>
     <a href="index.html" class="button">Back to Home</a>
 </div>
+
+<script>
+    document.querySelectorAll('.toggle-header').forEach(header => {
+        header.addEventListener('click', () => {
+            const content = header.nextElementSibling;
+            content.style.display = content.style.display === 'none' ? 'block' : 'none';
+        });
+    });
+
+    // Initialize all toggle contents to be hidden
+    document.querySelectorAll('.toggle-content').forEach(content => {
+        content.style.display = 'none';
+    });
+</script>
 </body>
 </html>
