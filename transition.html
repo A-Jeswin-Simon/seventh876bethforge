@@ -3,33 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transition Page</title>
+    <title>Callsark Registration</title>
     <style>
-        body, html {
-            height: 100%;
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTE2eGJ4MnMzMjk0b2F5czRuczJ4M3IyOWVlaDF5eGwzdHg5aWdkZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7VzgMsB6FLCilwS30v/giphy.gif') no-repeat center center;
+            background-size: cover;
+            color: #FFD700;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #000; /* Black background */
-            overflow: hidden; /* Prevent overflow */
+            padding: 20px;
         }
-        .transition-gif {
+
+        /* 🔹 MOBILE SCREEN FIX: Prevents background GIF text from being cut off */
+        @media (max-width: 768px) {
+            body {
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
+
+        .container {
+            width: 80vw;
+            max-width: 800px;
+            height: 100vh; /* Changed from 90vh to 100vh */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            padding: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+        }
+
+        .header {
+            font-size: 2rem;
+            font-weight: bold;
+            padding: 10px;
+            text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
             width: 100%;
-            height: auto; /* Maintain aspect ratio */
-            max-width: 60%;
-            max-height: 100vh;
-            object-fit: contain; /* Contain within the view */
+        }
+
+        .form-container {
+            flex: 1;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .footer {
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 14px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #FFD700;
+            border-radius: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .nav-links a {
+            color: #FFD700;
+            text-decoration: none;
+            font-weight: bold;
+            text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700;
+        }
+
+        .nav-links a:hover {
+            text-shadow: 0 0 15px #FFD700, 0 0 25px #FFD700;
         }
     </style>
 </head>
 <body>
-    <img src="callsark_branded.gif" alt="Transition GIF" class="transition-gif">
-    <script>
-        // Redirect to the registration page after 5 seconds
-        setTimeout(function() {
-            window.location.href = "https://sites.google.com/view/ntpanimalar/home";
-        }, 6000); // Adjust the time as needed
-    </script>
+    <div class="container">
+        <div class="header">Callsark Registration</div>
+        <div class="form-container">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc4yZvnHeZSQHWbyziUgQxPPOxx674hOo_zhq8MQDEnLNnPvA/viewform?embedded=true"></iframe>
+        </div>
+        <div class="footer">
+            <div class="nav-links">
+                <a href="https://a-jeswin-simon.github.io/NTpanimalar/">Home</a>
+                <a href="https://a-jeswin-simon.github.io/NTpanimalar/read_more.html">About</a>
+                <a href="#">Events</a>
+                <a href="#">Contact</a>
+            </div>
+            <div>© 2025 Callsark. All rights reserved.</div>
+        </div>
+    </div>
 </body>
 </html>
