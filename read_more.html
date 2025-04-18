@@ -146,6 +146,13 @@
     document.querySelectorAll('.toggle-content').forEach(content => {
         content.style.display = 'none';
     });
+    <script>
+  // This will remove the ".html" from the URL in the address bar.
+  if (window.location.pathname.endsWith('.html')) {
+    history.replaceState(null, null, window.location.pathname.replace('.html', ''));
+  }
+</script>
+
 </script>
 </body>
 </html>
