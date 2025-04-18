@@ -147,11 +147,13 @@
         content.style.display = 'none';
     });
     <script>
-  // This will remove the ".html" from the URL in the address bar.
-  if (window.location.pathname.endsWith('.html')) {
+  // Check if the URL ends with '.html' and hasn't already been modified
+  if (window.location.pathname.endsWith('.html') && !window.location.pathname.endsWith('/')) {
+    // Replace '.html' with nothing in the URL path
     history.replaceState(null, null, window.location.pathname.replace('.html', ''));
   }
 </script>
+
 
 </script>
 </body>
