@@ -140,15 +140,7 @@
         <li>9.5 Any participant or observer suspecting unauthorized replication, misrepresentation, or exploitation of Calphark’s intellectual property must report the violation to the administration. Calphark will assess such reports and take appropriate legal or procedural measures as necessary.</li>
     </ul>
     <a href="index.html" class="button">Back to Home</a>
-    <script>
-  // Check if the URL ends with '.html' and hasn't already been modified
-  if (window.location.pathname.endsWith('.html') && !window.location.pathname.endsWith('/')) {
-    // Replace '.html' with nothing in the URL path
-    history.replaceState(null, null, window.location.pathname.replace('.html', ''));
-  }
-</script>
-
-
+    <script>window.history.pushState({}, '', '/terms');</script>
 
 </body>
 </html>
