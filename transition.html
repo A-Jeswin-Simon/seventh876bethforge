@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transition Page 2</title>
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #000; /* Black background */
-            overflow: hidden; /* Prevent scrolling */
-        }
-        .transition-gif {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain; /* Ensure the entire GIF is visible */
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transition Page</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      background: black;
+    }
+
+    .transition-gif {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover; /* Fills the screen and crops if needed */
+    }
+  </style>
 </head>
 <body>
-    <img src="Calphark_brand_video_cinematic.gif" alt="Transition GIF" class="transition-gif">
-    <script>
-        // Redirect to the read_more page after 6 seconds
-        setTimeout(function() {
-            window.location.href = "read_more.html";
-        }, 6000); // Adjust the time as needed
-    </script>
-    <script>window.history.pushState({}, '', '/');</script>
+  <img src="Calphark_brand_video_cinematic.gif" alt="Transition GIF" class="transition-gif">
+
+  <script>
+    setTimeout(function () {
+      window.location.href = "https://register.calphark.com";
+    }, 6000); // Adjust delay to match GIF length
+  </script>
+  <script>
+    window.history.pushState({}, '', '/');
+  </script>
 </body>
 </html>
