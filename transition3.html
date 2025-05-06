@@ -1,34 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transition Page 2</title>
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #000; /* Black background */
-            overflow: hidden; /* Prevent scrolling */
-        }
-        .transition-gif {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain; /* Ensure the entire GIF is visible */
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Please wait</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      background: black;
+    }
+    video {
+      width: 100vw;
+      height: 100vh;
+      object-fit: contain;
+    }
+    #overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: black;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 1;
+    }
+    #mute-button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      z-index: 2;
+    }
+  </style>
 </head>
 <body>
-    <img src="callsark_branded_black.gif" alt="Transition GIF" class="transition-gif">
-    <script>
-        // Redirect to the read_more page after 6 seconds
-        setTimeout(function() {
-            window.location.href = "terms.html";
-        }, 6000); // Adjust the time as needed
-    </script>
-    <script>window.history.pushState({}, '', '/');</script>
+  <div id="overlay">Click to continue</div>
+  <video id="video" loop>
+    <source src="calphark_logo_reveal.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <button id="mute-button">Mute</button>
+
+  <script>
+    const overlay = document.getElementById('overlay');
+    const video = document.getElementById('video');
+    const muteButton = document.getElementById('mute-button');
+
+    overlay.addEventListener('click', () => {
+      video.play();
+      video.muted = false;
+      overlay.style.display = 'none';
+
+      // Stop video after 15 seconds and redirect
+      setTimeout(() => {
+        window.location.href = "terms.html";  // Redirect after 15 seconds
+      }, 15000);  // 15000 ms = 15 seconds
+    });
+
+    // Mute/unmute functionality
+    muteButton.addEventListener('click', () => {
+      video.muted = !video.muted;  // Toggle mute
+      muteButton.textContent = video.muted ? 'Unmute' : 'Mute';  // Change button text
+    });
+  </script>
+<script>window.history.pushState({}, '', '/');</script>
 </body>
 </html>
