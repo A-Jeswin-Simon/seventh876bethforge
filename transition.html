@@ -10,28 +10,25 @@
       padding: 0;
       height: 100%;
       overflow: hidden;
-      background: url('giphy.gif') no-repeat center center fixed; /* Set giphy.gif as the background */
-      background-size: cover; /* Ensure the GIF covers the entire background */
+      background: black;
     }
     video {
       width: 100vw;
       height: 100vh;
       object-fit: contain;
-      position: relative;
-      z-index: 1; /* Ensure video appears on top of the background */
     }
     #overlay {
       position: absolute;
       top: 0; left: 0;
       width: 100vw;
       height: 100vh;
-      background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+      background: black;
       color: white;
       display: flex;
       justify-content: center;
       align-items: center;
       cursor: pointer;
-      z-index: 2; /* Display above the video */
+      z-index: 1;
     }
     #mute-button {
       position: absolute;
@@ -43,7 +40,7 @@
       padding: 10px;
       cursor: pointer;
       font-size: 18px;
-      z-index: 3; /* Display above both video and overlay */
+      z-index: 2;
     }
   </style>
 </head>
