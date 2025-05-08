@@ -14,6 +14,14 @@
 <link rel="shortcut icon" href="/android-chrome-512x512.png">
 
     <style>
+        .brand-logo {
+    position: absolute; /* Ensure it stays in the corner */
+    top: 10px; /* Adjust to your liking */
+    left: 10px; /* Adjust to your liking */
+    width: 50px; /* Adjust the size of the logo */
+    height: 50px; /* Keep it proportional */
+    z-index: 10; /* Ensure it appears above other elements */
+}
         /* CSS Reset */
         * {
             margin: 0;
@@ -373,6 +381,7 @@
     <div class="scrolling-text">Welcome to Calphark - Your Elite Networking Platform! | Join us for a journey of innovation! | Connect with visionaries and changemakers! | Be part of the future!</div>
 </div>
 <header>
+    <img src="android-chrome-192x192.png" alt="Calphark Logo" class="brand-logo">
     <h1>Calphark</h1>
     <p>The future of elite networking and innovation.</p>
 </header>
