@@ -12,7 +12,7 @@
 
     body {
       height: 100vh;
-      background: url('https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGdmajVtNTFsNW93cjduOXo0bWphMjB0b2w2cnh6ZjVuMDd3bW92dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Qvp6Z2fidQR34IcwQ5/giphy.gif') no-repeat center center/cover;
+      background: url('https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGdmajVtNTFsNW93cjduOXo0bWphMjB0b2cnh6ZjVuMDd3bW92dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Qvp6Z2fidQR34IcwQ5/giphy.gif') no-repeat center center/cover;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -20,31 +20,31 @@
     }
 
     .logo {
-  width: 200px;
-  max-width: 60%;
-  filter: drop-shadow(0 0 10px rgba(228, 64, 137, 0.7)) 
-          drop-shadow(0 0 20px rgba(129, 77, 155, 0.6)) 
-          drop-shadow(0 0 30px rgba(74, 77, 175, 0.5));
-  animation: logoPulse 4s ease-in-out infinite, shinyGlow 3s linear infinite;
-  position: relative;
-  background: linear-gradient(
-    90deg,
-    rgba(228, 64, 137, 0.3) 25%, /* Pink */
-    rgba(129, 77, 155, 0.5) 50%, /* Purple */
-    rgba(74, 77, 175, 0.3) 75%  /* Blue */
-  );
-  background-size: 200% 100%;
-  -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 100%);
-}
+      width: 200px;
+      max-width: 60%;
+      filter: drop-shadow(0 0 10px rgba(228, 64, 137, 0.7)) 
+              drop-shadow(0 0 20px rgba(129, 77, 155, 0.6)) 
+              drop-shadow(0 0 30px rgba(74, 77, 175, 0.5));
+      animation: logoPulse 4s ease-in-out infinite, shinyGlow 3s linear infinite;
+      position: relative;
+      background: linear-gradient(
+        90deg,
+        rgba(228, 64, 137, 0.3) 25%, /* Pink */
+        rgba(129, 77, 155, 0.5) 50%, /* Purple */
+        rgba(74, 77, 175, 0.3) 75%  /* Blue */
+      );
+      background-size: 200% 100%;
+      -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 100%);
+    }
 
-@keyframes shinyGlow {
-  0% {
-    background-position: 200% 0;
-  }
-  100% {
-    background-position: -200% 0;
-  }
-}
+    @keyframes shinyGlow {
+      0% {
+        background-position: 200% 0;
+      }
+      100% {
+        background-position: -200% 0;
+      }
+    }
 
     @keyframes logoPulse {
       0%, 100% {
@@ -92,6 +92,12 @@
       }
     }
   </style>
+  <script>
+    // Redirect to terms.html after 7 seconds
+    setTimeout(function () {
+      window.location.href = "terms.html";
+    }, 7000);
+  </script>
 </head>
 <body>
   <!-- Replace android-chrome-192x192.png' with your actual logo path -->
