@@ -33,28 +33,29 @@
             pointer-events: none;
         }
         .scroll-icon {
-    width: 30px;
+    width: 50px; /* Increase size for scrolling text logos */
     height: auto;
-    margin: 0 10px;
+    margin: 0 15px;
     vertical-align: middle;
 }
 
 .supporters-logos {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 3rem;
     margin-top: 1rem;
 }
 
 .supporter-logo {
-    width: 100px;
+    width: 150px; /* Increase size for supporter section logos */
     height: auto;
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
+    opacity: 0.9;
+    transition: opacity 0.3s ease, transform 0.2s ease;
 }
 
 .supporter-logo:hover {
     opacity: 1;
+    transform: scale(1.1); /* Slight zoom effect on hover */
 }
         nav {
             background-color: rgba(31, 0, 48, 0.85);
@@ -396,9 +397,12 @@
 </nav>
 <div class="scrolling-container">
     <div class="scrolling-text">
-        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google" class="scroll-icon"> Resonate with Google's vision | 
-        <img src="https://openai.com/content/images/2022/05/openai-avatar.png" alt="OpenAI" class="scroll-icon"> Inspired by OpenAI's shared principles | 
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Y_Combinator_logo.svg" alt="Y Combinator" class="scroll-icon"> Aligned with Y Combinator's trailblazing spirit
+        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google" class="scroll-icon">
+        Resonate with Google's vision |
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/OpenAI_Logo.svg" alt="OpenAI" class="scroll-icon">
+        Inspired by OpenAI's shared principles |
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Y_Combinator_logo.svg" alt="Y Combinator" class="scroll-icon">
+        Aligned with Y Combinator's trailblazing spirit
     </div>
 </div>
 <header>
@@ -442,7 +446,7 @@
     <p>Supported by and inspired by today's leading innovators.</p>
     <div class="supporters-logos">
         <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google" class="supporter-logo">
-        <img src="https://openai.com/content/images/2022/05/openai-avatar.png" alt="OpenAI" class="supporter-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/OpenAI_Logo.svg" alt="OpenAI" class="supporter-logo">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Y_Combinator_logo.svg" alt="Y Combinator" class="supporter-logo">
     </div>
 </div>
