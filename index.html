@@ -32,6 +32,29 @@
             filter: blur(5px);
             pointer-events: none;
         }
+        .scroll-icon {
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+      .supporters-logos {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.supporter-logo {
+    width: 100px;
+    height: auto;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.supporter-logo:hover {
+    opacity: 1;
+}
         nav {
             background-color: rgba(31, 0, 48, 0.85);
             padding: 1rem;
@@ -371,7 +394,11 @@
     <a href="transition3.html">Terms and Conditions</a>
 </nav>
 <div class="scrolling-container">
-    <div class="scrolling-text">Welcome to Calphark - Your Elite Networking Platform! | Join us for a journey of innovation! | Connect with visionaries and changemakers! | Be part of the future!</div>
+    <div class="scrolling-text">
+        <img src="google-logo-grayscale.png" alt="Google" class="scroll-icon"> Resonating with the vision of OpenAI, Google, and Y Combinator | 
+        <img src="openai-logo-grayscale.png" alt="OpenAI" class="scroll-icon"> Inspired by the shared principles of disruption | 
+        <img src="ycombinator-logo-grayscale.png" alt="Y Combinator" class="scroll-icon"> Shaping the future with aligned innovators
+    </div>
 </div>
 <header>
     <h1>Calphark</h1>
@@ -408,6 +435,15 @@
     <h2>Why This Platform?</h2>
     <p>"In a saturated landscape of passive conferences and static networking events, this emerges as an intelligence-driven, sentient market construct—a space where interactions are non-linear and organically evolving, designed to create long-term impact."</p>
     <a href="transition2.html" class="button">Read More</a>
+</div>
+<div id="supporters" class="new-section">
+    <h2>🌟 Visionary Supporters</h2>
+    <p>Inspired and aligned in thoughts with leaders and pioneering organizations.</p>
+    <div class="supporters-logos">
+        <img src="google_logo.jpg" alt="Google" class="supporter-logo">
+        <img src="open_ai.jpg" alt="OpenAI" class="supporter-logo">
+        <img src="y_combinator.png" alt="Y Combinator" class="supporter-logo">
+    </div>
 </div>
 <div class="scrolling-container">
     <div class="scrolling-text">Intelligence-driven market construct | Non-linear and organically evolving interactions | Long-term impact</div>
