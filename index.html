@@ -78,6 +78,53 @@
         text-align: center;
     }
 }
+      .supporters-scroll-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.supporters-scroll-track {
+  display: flex;
+  gap: 3rem;
+  animation: scroll-logos 5s linear infinite;
+  width: max-content;
+}
+
+.supporter-logo {
+  width: 180px;
+  height: auto;
+  opacity: 0.8;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.supporter-logo:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+@keyframes scroll-logos {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive Tweaks */
+@media (max-width: 600px) {
+  .supporter-logo {
+    width: 120px;
+  }
+
+  .supporters-scroll-track {
+    gap: 2rem;
+    animation-duration: 40s;
+  }
+}
+
 
         nav {
             background-color: rgba(31, 0, 48, 0.85);
@@ -413,7 +460,7 @@
     <a href="#why-us">Why Us</a>
     <a href="#selection">Selection</a>
     <a href="#beyond-networking">Beyond Networking</a>
-    <a href="#call-to-action">Call to Action</a>
+    <a href="#call-to-action">Registration</a>
     <!-- Add Terms and Conditions Link Here -->
     <a href="transition3.html">Terms and Conditions</a>
 </nav>
@@ -463,15 +510,6 @@
     <p>"In a saturated landscape of passive conferences and static networking events, this emerges as an intelligence-driven, sentient market construct—a space where interactions are non-linear and organically evolving, designed to create long-term impact."</p>
     <a href="transition2.html" class="button">Read More</a>
 </div>
-<div id="supporters" class="new-section">
-    <h2>🌟 Visionary Supporters</h2>
-    <p>In alignment with and inspired by today's leading innovators.</p>
-    <div class="supporters-logos">
-        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google" class="supporter-logo">
-        <img src="https://www.mckinsey.com/favicon.ico" alt="McKinsey" class="supporter-logo">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" class="supporter-logo">
-    </div>
-</div>
 <div class="scrolling-container">
     <div class="scrolling-text">Intelligence-driven market construct | Non-linear and organically evolving interactions | Long-term impact</div>
 </div>
@@ -490,6 +528,31 @@
 </div>
 <div class="scrolling-container">
     <div class="scrolling-text">Self-sustaining knowledge mesh | Emergent collaboration | Curated interaction velocity</div>
+</div>
+<div id="supporters" class="new-section">
+  <h2>🌟 Visionary Supporters</h2>
+  <p>In alignment with and inspired by today's leading innovators.</p>
+  <div class="supporters-scroll-wrapper">
+    <div class="supporters-scroll-track">
+      <!-- Logo Set (x2 for seamless scrolling) -->
+      <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google" class="supporter-logo">
+      <img src="https://www.mckinsey.com/favicon.ico" alt="McKinsey" class="supporter-logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" class="supporter-logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" class="supporter-logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" class="supporter-logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" class="supporter-logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" class="supporter-logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" class="supporter-logo">
+      <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google" class="supporter-logo">
+      <img src="https://www.mckinsey.com/favicon.ico" alt="McKinsey" class="supporter-logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" class="supporter-logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" class="supporter-logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" class="supporter-logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" class="supporter-logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" class="supporter-logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" class="supporter-logo">
+      </div>
+  </div>
 </div>
 <div id="call-to-action" class="new-section">
     <h2>Final Call-to-Action</h2>
