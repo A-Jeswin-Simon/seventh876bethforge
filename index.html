@@ -126,17 +126,155 @@
 }
 
 
-        nav {
-            background-color: rgba(31, 0, 48, 0.85);
-            padding: 1rem;
-            text-align: center;
-        }
-        nav a {
-            color: #ffd700;
-            margin: 0 1rem;
-            text-decoration: none;
-            font-size: 1.2rem;
-        }
+        /* Navbar styling */
+/* Navbar styling */
+/* Navbar styling */
+nav {
+    background-color: #ffffff; /* White background */
+    padding: 0.0001rem 0;
+    text-align: center;
+    border-bottom: 2px solid #ddd; /* Optional: add a border for separation */
+    top: 0;
+    width: 100%;
+    z-index: 5000; /* Ensures it stays above other content */
+}
+
+nav a {
+    color: #1f0030; /* Dark purple text */
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav img {
+    height: 40px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* Scrolling logos in the navbar */
+.scrolling-container {
+    overflow: hidden;
+    position: relative;
+    width: 50%;
+    border-top: 1px solid #ddd; /* Optional: separates navbar sections */
+    padding: 0.001rem 0;
+}
+
+.scrolling-track {
+    display: flex;
+    width: max-content;
+    animation: scroll-horizontal 7s linear infinite; /* Infinite smooth scrolling */
+}
+
+.scroll-icon {
+    width: 40px;
+    height: auto;
+    margin: 0 10px;
+    vertical-align: middle;
+    max-width: 100%; /* Ensures it never overflows */
+}
+
+/* Animation for continuous scrolling */
+@keyframes scroll-horizontal {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive tweaks for navbar and scrolling logos */
+@media (max-width: 100px) {
+    nav {
+        text-align: left;
+    }
+    nav a {
+        display: block;
+        margin: 0.5rem 0;
+        font-size: 1rem;
+    }
+    .scroll-icon {
+        width: 30px; /* Smaller logos for mobile */
+        margin: 0 5px;
+    }
+    .scrolling-track {
+        animation-duration: 30s; /* Slower scrolling on smaller screens */
+    }
+}
+.scroll-icon {
+    width: 40px;
+    height: auto;
+    margin: 0 10px;
+    vertical-align: middle;
+    max-width: 100%; /* Ensures it never overflows */
+}
+
+/* Animation for scrolling effect */
+@keyframes scroll-horizontal {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Responsive tweaks for navbar and scrolling logos */
+@media (max-width: 600px) {
+    nav {
+        text-align: left;
+    }
+    nav a {
+        display: block;
+        margin: 0.5rem 0;
+        font-size: 1rem;
+    }
+    .scroll-icon {
+        width: 30px; /* Smaller logos for mobile */
+        margin: 0 5px;
+    }
+    .scrolling-text {
+        font-size: 0.85rem; /* Adjust text size on smaller screens */
+    }
+}
+.scroll-icon {
+    width: 40px;
+    height: auto;
+    margin: 0 10px;
+    vertical-align: middle;
+    max-width: 100%; /* Ensures it never overflows */
+}
+
+/* Animation for scrolling effect */
+@keyframes scroll-horizontal {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Responsive tweaks for navbar and scrolling logos */
+@media (max-width: 600px) {
+    nav {
+        text-align: left;
+    }
+    nav a {
+        display: block;
+        margin: 0.5rem 0;
+        font-size: 1rem;
+    }
+    .scroll-icon {
+        width: 30px; /* Smaller logos for mobile */
+        margin: 0 5px;
+    }
+    .scrolling-text {
+        font-size: 0.85rem; /* Adjust text size on smaller screens */
+    }
+}
         header {
             text-align: center;
             padding: 2rem;
@@ -452,17 +590,40 @@
 </head>
 <body>
 <div class="moving-background">
-    <img src="giphy.gif" alt="Background Animation">
+    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExa283cDVpNjRnMjJobGMzNjNwYWRpbHg0b2NvdnQwMTUxY2dyeWxnOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Qvp6Z2fidQR34IcwQ5/giphy.gif" alt="Background Animation">
 </div>
 <nav>
-    <a href="#overview">Overview</a>
-    <a href="#engagement">Engagement</a>
-    <a href="read_more.html">Why us</a>
-    <a href="#selection">Selection</a>
-    <a href="#supporters">Companies</a>
-    <a href="#call-to-action">Registration</a>
-    <!-- Add Terms and Conditions Link Here -->
-    <a href="transition3.html">Terms and Conditions</a>
+    <div style="display: flex; align-items: center; justify-content: center; gap: 1rem;">
+        <a href="#overview">Overview</a>
+        <a href="#engagement">Engagement</a>
+        <a href="read_more.html">Why us</a>
+        <a href="#selection">Selection</a>
+        <a href="#supporters">Companies</a>
+        <a href="#call-to-action">Registration</a>
+        <a href="transition3.html">Terms and Conditions</a>
+    </div>
+    <!-- Scrolling Logos Section -->
+    <div class="scrolling-container">
+        <div class="scrolling-track">
+            <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google" class="scroll-icon">
+            <img src="https://www.mckinsey.com/favicon.ico" alt="McKinsey" class="scroll-icon">
+            <img src="https://www.pngplay.com/wp-content/uploads/3/White-Amazon-Logo-PNG-HD-Quality.png" alt="Amazon" class="scroll-icon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" class="scroll-icon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" class="scroll-icon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" class="scroll-icon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" class="scroll-icon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" class="scroll-icon">
+            <!-- Duplicate for seamless scrolling -->
+            <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google" class="scroll-icon">
+            <img src="https://www.mckinsey.com/favicon.ico" alt="McKinsey" class="scroll-icon">
+            <img src="https://www.pngplay.com/wp-content/uploads/3/White-Amazon-Logo-PNG-HD-Quality.png" alt="Amazon" class="scroll-icon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" class="scroll-icon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" class="scroll-icon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" class="scroll-icon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" class="scroll-icon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" class="scroll-icon">
+        </div>
+    </div>
 </nav>
 <div class="scrolling-container">
     <div class="scrolling-text">
@@ -556,7 +717,7 @@
 </div>
 <div id="call-to-action" class="new-section">
   <button id="joinButton" class="button">
-    <img src="Calphark_logo.png" alt="Join Logo" style="width: 30px; height: 30px; vertical-align: middle; margin-right: 10px;">
+    <img src="data:image/jpeg;base64,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" alt="Join Logo" style="width: 30px; height: 30px; vertical-align: middle; margin-right: 10px;">
     Join Calphark Now
   </button>
 </div>
