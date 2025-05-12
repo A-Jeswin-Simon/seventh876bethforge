@@ -721,8 +721,14 @@ nav img {
 
 <div id="popup" class="popup">
     <div class="popup-content">
-        <div id="popupMessage" class="popup-message">You're about to step into something truly transformative.Endless opportunities lie ahead. Are you ready?</div>
-        <button id="proceedButton" class="continue-btn">Proceed</button>
+        <div id="popupMessage" class="popup-message">By continuing, I agree to Calphark Bylaws & Code of Conduct and Privacy Policy.</div>
+        <div style="margin-top: 1.5rem;">
+            <button id="yesButton" class="continue-btn">Yes</button>
+            <button id="noButton" class="continue-btn" style="background-color: #ff4d4d; color: #fff;">No</button>
+        </div>
+        <div style="margin-top: 1rem;">
+            <a href="terms.html" target="_blank" class="continue-btn" style="display: inline-block; text-align: center; background-color: #007bff; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Read Terms</a>
+        </div>
     </div>
 </div>
 <!-- Timer Window Section -->
@@ -761,34 +767,37 @@ nav img {
 <!-- Prominent Button -->
 <a id="formLink" href="transition.html" target="_blank" class="button prominent-button">Register here</a>
 <script>
-    document.getElementById('joinButton').addEventListener('click', function() {
+    // Ensure the Join Button opens the popup
+    document.getElementById('joinButton').addEventListener('click', function () {
         document.getElementById('popup').style.display = 'flex';
     });
 
-    document.getElementById('proceedButton').addEventListener('click', function() {
+    // Yes Button functionality: Proceed with the flow
+    document.getElementById('yesButton').addEventListener('click', function () {
         document.getElementById('popup').style.display = 'none';
         document.getElementById('revealSection').style.display = 'block';
-        setTimeout(function() {
+        setTimeout(function () {
             // Show timer window
             document.getElementById('timerWindow').style.display = 'block';
-            var countdown = 5; // Change to 3 for a 3-second countdown
+            var countdown = 5; // Adjust the countdown duration as needed
             var countdownElement = document.getElementById('countdown');
-            var timer = setInterval(function() {
+            var timer = setInterval(function () {
                 countdown--;
                 countdownElement.textContent = countdown;
                 if (countdown <= 0) {
                     clearInterval(timer);
-                    // Hide timer window
-                    document.getElementById('timerWindow').style.display = 'none';
-                    // Blur the rest of the content
-                    document.querySelectorAll('body > :not(.prominent-button)').forEach(element => {
-                        element.classList.add('blurred');
-                    });
-                    // Show the proceed button
+                    // Proceed to the next section or page
                     document.querySelector('.prominent-button').style.display = 'block';
                 }
             }, 1000);
         }, 5000); // Match the duration of the loading animation
+    });
+
+    // No Button functionality: Cancel and redirect
+    document.getElementById('noButton').addEventListener('click', function () {
+        document.getElementById('popup').style.display = 'none';
+        alert('You have chosen not to agree to the terms. Redirecting...');
+        window.location.href = 'index.html'; // Replace with the desired redirect URL
     });
 </script>
 </body>
