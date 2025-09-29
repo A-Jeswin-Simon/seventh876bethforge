@@ -226,7 +226,7 @@
         // Module loader
         async function loadModule(moduleName) {
             try {
-                const response = await fetch(`modules/${moduleName}.html`);
+                const response = await fetch(`${moduleName}.html`);
                 if (!response.ok) throw new Error(`Failed to load ${moduleName}`);
                 return await response.text();
             } catch (error) {
@@ -364,3 +364,4 @@
     </script>
 </body>
 </html>
+
