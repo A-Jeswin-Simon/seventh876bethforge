@@ -1,812 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calphark - The Elite Platform</title>
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
-<link rel="icon" type="image/png" sizes="64x64" href="/favicon-64x64.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
-<link rel="shortcut icon" href="/android-chrome-512x512.png">
-
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>CALPHARK - Empowering Innovation, Building the Future</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap"
+        rel="stylesheet" />
     <style>
+
+     html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-y: scroll;   /* force vertical scroll */
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE, Edge */
+    }
+
+    /* Chrome, Safari, Opera */
+    ::-webkit-scrollbar {
+      width: 0px;
+      height: 0px;
+    }
+
         
-        /* CSS Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        .slider-container {
+            position: relative;
+            overflow: hidden;
         }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1f0030, #000020);
-            color: #fff;
-            overflow-x: hidden;
-        }
-        .blurred {
-            filter: blur(5px);
-            pointer-events: none;
-        }
-        .scroll-icon {
-    width: 60px;
-    height: auto;
-    margin: 0 15px;
-    vertical-align: middle;
-    max-width: 100%; /* Ensure it never overflows */
-}
-
-.supporters-logos {
-    display: flex;
-    flex-wrap: wrap; /* Allows logos to wrap on small screens */
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 1rem;
-}
-
-.supporter-logo {
-    width: 180px;
-    max-width: 100%; /* Prevents overflow on small screens */
-    height: auto;
-    opacity: 0.9;
-    transition: opacity 0.3s ease, transform 0.2s ease;
-}
-
-.supporter-logo:hover {
-    opacity: 1;
-    transform: scale(1.1);
-}
-
-/* Responsive styles for small screens */
-@media (max-width: 600px) {
-    .supporter-logo {
-        width: 120px; /* Smaller logos on mobile */
-    }
-
-    .scroll-icon {
-        width: 40px; /* Reduce scroll icon size on mobile */
-        margin: 0 8px;
-    }
-
-    .scrolling-text {
-        font-size: 0.85rem; /* Optional: scale down text */
-        flex-wrap: wrap;
-        text-align: center;
-    }
-}
-      .supporters-scroll-wrapper {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-
-.supporters-scroll-track {
-  display: flex;
-  gap: 3rem;
-  animation: scroll-logos 5s linear infinite;
-  width: max-content;
-}
-
-.supporter-logo {
-  width: 180px;
-  height: auto;
-  opacity: 0.8;
-  transition: opacity 0.3s ease, transform 0.2s ease;
-  flex-shrink: 0;
-}
-
-.supporter-logo:hover {
-  opacity: 1;
-  transform: scale(1.1);
-}
-
-@keyframes scroll-logos {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-/* Responsive Tweaks */
-@media (max-width: 600px) {
-  .supporter-logo {
-    width: 120px;
-  }
-
-  .supporters-scroll-track {
-    gap: 2rem;
-    animation-duration: 40s;
-  }
-}
-
-
-        /* Navbar styling */
-/* Navbar styling */
-/* Navbar styling */
-nav {
-    background-color: #ffffff; /* White background */
-    padding: 1rem 0; /* Add padding to create spacing */
-    text-align: center;
-    border-bottom: 1.1px solid #ddd; /* Optional: add a border for separation */
-    top: 0;
-    width: 100%;
-    z-index: 5000; /* Ensures it stays above other content */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for better visibility */
-}
-
-nav a {
-    color: #1f0030; /* Dark purple text */
-    margin: 0 1rem; /* Add spacing between links */
-    text-decoration: none;
-    font-size: 1rem; /* Increase font size to make links visible */
-    font-weight: bold; /* Optional: make text bold for better readability */
-}
-
-nav img {
-    height: 30px;
-    vertical-align: middle;
-    margin-right: 10px;
-  }
-.scrolling-container {
-    overflow: hidden;
-    position: relative;
-    width: 50%;
-    border-top: 0.1px solid #ddd; /* Optional: separates navbar sections */
-    padding: 0.001rem 0;
-}
-
-.scrolling-track {
-    display: flex;
-    width: max-content;
-    animation: scroll-horizontal 3s linear infinite; /* Infinite smooth scrolling */
-}
-.scroll-icon {
-    width: 40px;
-    height: auto;
-    margin: 0 10px;
-    vertical-align: middle;
-    max-width: 100%; /* Ensures it never overflows */
-}
-
-/* Animation for continuous scrolling */
-@keyframes scroll-horizontal {
-    0% {
-        transform: translateX(0%);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-/* Responsive tweaks for navbar and scrolling logos */
-@media (max-width: 100px) {
-    nav {
-        text-align: left;
-    }
-    nav a {
-        display: block;
-        margin: 0.5rem 0;
-        font-size: 1rem;
-    }
-    .scroll-icon {
-        width: 30px; /* Smaller logos for mobile */
-        margin: 0 5px;
-    }
-    .scrolling-track {
-        animation-duration: 30s; /* Slower scrolling on smaller screens */
-    }
-}
-.scroll-icon {
-    width: 40px;
-    height: auto;
-    margin: 0 10px;
-    vertical-align: middle;
-    max-width: 100%; /* Ensures it never overflows */
-}
-
-/* Animation for scrolling effect */
-@keyframes scroll-horizontal {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-/* Responsive tweaks for navbar and scrolling logos */
-@media (max-width: 600px) {
-    nav {
-        text-align: left;
-    }
-    nav a {
-        display: block;
-        margin: 0.5rem 0;
-        font-size: 1rem;
-    }
-    .scroll-icon {
-        width: 30px; /* Smaller logos for mobile */
-        margin: 0 5px;
-    }
-    .scrolling-text {
-        font-size: 0.85rem; /* Adjust text size on smaller screens */
-    }
-}
-.scroll-icon {
-    width: 40px;
-    height: auto;
-    margin: 0 10px;
-    vertical-align: middle;
-    max-width: 100%; /* Ensures it never overflows */
-}
-
-/* Animation for scrolling effect */
-@keyframes scroll-horizontal {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-/* Responsive tweaks for navbar and scrolling logos */
-@media (max-width: 600px) {
-    nav {
-        text-align: left;
-    }
-    nav a {
-        display: block;
-        margin: 0.5rem 0;
-        font-size: 1rem;
-    }
-    .scroll-icon {
-        width: 30px; /* Smaller logos for mobile */
-        margin: 0 5px;
-    }
-    .scrolling-text {
-        font-size: 0.85rem; /* Adjust text size on smaller screens */
-    }
-}
-        header {
-            text-align: center;
-            padding: 2rem;
-            background-color: rgba(31, 0, 48, 0.85);
-        }
-        header h1 {
-            font-size: 3.5rem;
-            margin: 0;
-            color: #ffd700;
-            animation: glow 2s infinite alternate;
-        }
-        header p {
-            font-size: 1.4rem;
-            color: #fff;
-        }
-        @keyframes glow {
-            from { text-shadow: 0 0 20px #ffd700; }
-            to { text-shadow: 0 0 50px #ffd700; }
-        }
-        .button {
-            display: inline-block;
-            margin-top: 1.5rem;
-            padding: 1rem 2.5rem;
-            font-size: 1.4rem;
-            color: #1f0030;
-            background-color: #ffd700;
-            border: none;
-            border-radius: 40px;
-            cursor: pointer;
-            transition: all 0.4s ease;
-            box-shadow: 0 4px 20px rgba(255, 215, 0, 0.4);
-            text-decoration: none;
-        }
-        .button:hover {
-            background-color: #fff;
-            color: #1f0030;
-            transform: scale(1.1);
-            box-shadow: 0 6px 30px rgba(255, 215, 0, 0.6);
-        }
-        .cta-section .button {
-            background: linear-gradient(45deg, #ff6a00, #ee0979);
-            color: #fff;
-            font-size: 1.6rem;
-            padding: 1.2rem 3rem;
-            border-radius: 50px;
-            box-shadow: 0 5px 25px rgba(255, 105, 180, 0.5);
-        }
-        .cta-section .button:hover {
-            background: linear-gradient(45deg, #ee0979, #ff6a00);
-            box-shadow: 0 8px 30px rgba(255, 105, 180, 0.7);
-        }
-        .announcement, .highlight-message, .new-section {
-            background-color: rgba(31, 0, 48, 0.7);
-            padding: 2rem;
-            border-radius: 20px;
-            margin: 2rem;
-            text-align: center;
-        }
-        .announcement h2, .highlight-message h2, .new-section h2 {
-            color: #ffd700;
-        }
-        .announcement p a {
-            color: #ffd700;
-            text-decoration: underline;
-        }
-        .moving-background {
-            position: fixed;
+        .slide {
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1;
-            overflow: hidden;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
         }
-        .moving-background img {
+        .slide.active {
+            opacity: 1;
+        }
+        
+        .slide-image {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            animation: backgroundAnimation 10s linear infinite;
         }
-        @keyframes backgroundAnimation {
-            0% { transform: scale(1) translateY(0); }
-            50% { transform: scale(1.1) translateY(-10%); }
-            100% { transform: scale(1) translateY(0); }
-        }
-        .scrolling-container {
-            width: 100%;
-            overflow: hidden;
-            white-space: nowrap;
-            position: relative;
-            margin-top: 2rem;
-            background-color: rgba(31, 0, 48, 0.85);
-            padding: 1rem;
-            border-radius: 10px;
-        }
-        .scrolling-text {
-            display: inline-block;
-            font-size: 1.5rem;
-            white-space: nowrap;
-            animation: scroll 10s linear infinite;
-            color: #ffd700;
-        }
-        @keyframes scroll {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(-100%); }
-        }
-        footer {
-            text-align: center;
-            margin-top: 4rem;
-            padding: 1rem;
-            font-size: 0.9rem;
-            color: #bbb;
-            border-top: 4px solid rgba(255, 255, 255, 0.3);
-        }
-        footer p {
-            font-size: 1rem;
-            color: #ffd700;
-            font-weight: bold;
-        }
-        footer a {
-            color: #ffd700;
-            font-size: 1.1rem;
-            text-decoration: underline;
-            animation: glow 1.5s infinite alternate;
-        }
-        @keyframes glow {
-            from { text-shadow: 0 0 10px #ffd700; }
-            to { text-shadow: 0 0 20px #ffd700; }
-        }
-        .cta-section {
-            text-align: center;
-            margin: 3rem;
-        }
-        .telegram-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        .telegram-buttons .button {
-            margin: 0.5rem;
-            background: linear-gradient(45deg, #ffd700, #ffb300);
-            font-weight: bold;
-        }
-        .visitor-count {
-            text-align: center;
-            margin-top: 2rem;
-            font-size: 1.2rem;
-            color: #ffd700;
-        }
-        .footer-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin-top: 1rem;
-        }
-        .footer-buttons .button {
-            padding: 0.8rem 1.8rem;
-            font-size: 1rem;
-        }
-        .footer-buttons img {
-            width: 20px;
-            height: 20px;
-            vertical-align: middle;
-            margin-right: 8px;
-        }
-
-        /* Updated Popup styles */
-        .popup {
-            display: none;
-            position: fixed;
+        
+        .slide-overlay {
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            justify-content: center;
+            background: rgba(0, 0, 0, 0.4);
+            display: flex;
             align-items: center;
+            justify-content: center;
         }
-        .popup-content {
-            background-color: #1f0030; /* Dark background */
-            padding: 20px;
-            border-radius: 10px;
+        
+        .slide-content {
             text-align: center;
-            animation: popup-animation 0.5s ease-out;
-            color: #ffd700; /* Bright gold text color */
+            color: white;
+            max-width: 600px;
+            padding: 0 20px;
         }
-        @keyframes popup-animation {
-            0% {
-                transform: scale(0);
-                opacity: 0;
-            }
-            100% {
-                transform: scale(1);
-                opacity: 1;
-            }
+        
+        .slide-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
         }
-        .popup-message {
+        
+        .slide-description {
             font-size: 1.2rem;
-            margin: 10px 0;
-            color: #ffd700; /* Bright gold text color */
+            margin-bottom: 2rem;
+            opacity: 0.9;
         }
-        .loading-bar {
-            width: 80%;
-            background-color: #ddd;
-            margin: 20px auto;
-            border-radius: 25px;
-            overflow: hidden;
-        }
-        .loading-bar-inner {
-            width: 0;
-            height: 20px;
-            background-color: #28a745;
-            animation: loading 5s linear forwards;
-        }
-        @keyframes loading {
-            0% { width: 0; }
-            100% { width: 100%; }
-        }
-        .continue-btn {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #ffd700; /* Bright gold background color */
-            color: #1f0030; /* Dark text color */
+        
+        .slide-button {
+            background: #3b82f6;
+            color: white;
+            padding: 12px 32px;
             border: none;
-            border-radius: 5px;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background 0.3s ease;
         }
-        .continue-btn:hover {
-            background-color: #fff; /* Light background on hover */
-            color: #1f0030; /* Dark text color */
+        
+        .slide-button:hover {
+            background: #2563eb;
         }
-
-        /* Reveal section styles */
-        #revealSection {
-            display: none;
-            text-align: center;
-            padding: 2rem;
-            background-color: rgba(31, 0, 48, 0.85);
-            border-radius: 20px;
-            margin: 2rem;
-            animation: reveal-animation 1s ease-out;
-        }
-        @keyframes reveal-animation {
-            0% {
-                opacity: 0;
-                transform: translateY(20%);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Timer window styles */
-        .timer-window {
-            display: none;
-            position: fixed;
-            top: 50%;
+        
+        .slider-indicators {
+            position: absolute;
+            bottom: 30px;
             left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgba(31, 0, 48, 0.85);
-            padding: 2rem;
-            border-radius: 20px;
-            text-align: center;
-            color: #ffd700;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
         }
-
-        /* Prominent button styles */
-        .prominent-button {
-            background-color: #ff4500; /* Bright red background */
-            color: #fff; /* White text */
-            font-size: 1.8rem; /* Larger font size */
-            padding: 1.2rem 3rem; /* Larger padding */
-            border-radius: 0; /* Remove rounded corners */
-            box-shadow: 0 8px 30px rgba(255, 69, 0, 0.7); /* Box shadow for emphasis */
-            animation: pulse 1s infinite alternate; /* Pulsing animation */
-            position: fixed;
-            top: 50%;
-            left: 0;
-            width: 100%; /* Make the button full width */
-            text-align: center; /* Center the text */
-            z-index: 9999;
-            display: none;
+        
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: background 0.3s ease;
         }
-
-        /* Pulsing animation */
-        @keyframes pulse {
-            from {
-                transform: scale(1);
-                box-shadow: 0 8px 30px rgba(255, 69, 0, 0.7);
-            }
-            to {
-                transform: scale(1.1);
-                box-shadow: 0 10px 40px rgba(255, 69, 0, 1);
-            }
+        
+        .indicator.active {
+            background: white;
         }
-
-        /* Media query for mobile screens */
-        @media (max-width: 600px) {
-            nav {
-                text-align: left;
+        
+        @media (max-width: 768px) {
+            .slide-title {
+                font-size: 2rem;
             }
-            nav a {
-                display: block;
-                margin: 0.5rem 0;
+            
+            .slide-description {
                 font-size: 1rem;
             }
         }
     </style>
-</head>
-<body>
-<div class="moving-background">
-    <img src="giphy.gif" alt="Background Animation">
-</div>
-<nav>
-    <nav>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
-        <img src="Calphark_logo.png" 
-             alt="Calphark Logo" 
-             style="height: 100px; width: 220px; margin-bottom: 5px;">
-        <span style="color: #1f6aa6; font-size: 1rem; font-weight: bold;">A sanctuary for visionaries</span>
-    </div>
-    <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 1rem;">
-        <a href="read_more.html">Why us</a>
-        <a href="#endorsement-supporters">Relations</a>
-        <a href="#call-to-action">Registration</a>
-        <a href="transition3.html">Terms and Conditions</a>
-    </div>
-</nav>
-    <!-- Scrolling Logos Section -->
-    <div class="scrolling-container">
-        <div class="scrolling-track">
-            <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google" class="scroll-icon">
-            <img src="https://www.mckinsey.com/favicon.ico" alt="McKinsey" class="scroll-icon">
-            <img src="https://www.pngplay.com/wp-content/uploads/3/White-Amazon-Logo-PNG-HD-Quality.png" alt="Amazon" class="scroll-icon">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" class="scroll-icon">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" class="scroll-icon">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" class="scroll-icon">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" class="scroll-icon">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" class="scroll-icon">
-            <!-- Duplicate for seamless scrolling -->
-            <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google" class="scroll-icon">
-            <img src="https://www.mckinsey.com/favicon.ico" alt="McKinsey" class="scroll-icon">
-            <img src="https://www.pngplay.com/wp-content/uploads/3/White-Amazon-Logo-PNG-HD-Quality.png" alt="Amazon" class="scroll-icon">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" class="scroll-icon">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" class="scroll-icon">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" class="scroll-icon">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" class="scroll-icon">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" class="scroll-icon">
-        </div>
-    </div>
-</nav>
-<div class="scrolling-container">
-    <div class="scrolling-text">
-        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google" class="scroll-icon">
-        Resonate with Google's vision |
-        <img src="https://www.mckinsey.com/favicon.ico" alt="McKinsey" class="scroll-icon">
-        Inspired by McKinsey's strategic outlook |
-        <img src="https://www.pngplay.com/wp-content/uploads/3/White-Amazon-Logo-PNG-HD-Quality.png" alt="Amazon" class="scroll-icon">
-        Aligned with Amazon's trailblazing spirit
-    </div>
-</div>
-<header>
-    <h1>Calphark</h1>
-    <p>The future of elite networking and innovation.</p>
-</header>
-<div class="announcement">
-    <h2>🚀 The Journey Begins</h2>
-    <p>Step into an environment designed for visionaries and changemakers. Connect, collaborate, and build the future.</p>
-    <p>Follow us for exclusive updates on our <a href="https://t.me/panimalarNT" target="_blank">Telegram Channel</a>.</p>
-    <a href="transition2.html" class="button">Read More</a>
-</div>
-<div class="highlight-message">
-    <h2>🌟 Innovation. Vision. Impact.</h2>
-    <p>We are shaping the future one idea at a time. Be part of this elite movement.</p>
-    <a href="transition2.html" class="button">Read More</a>
-</div>
-<div id="overview" class="new-section">
-    <h2>Event Overview</h2>
-    <p>"A cutting-edge ecosystem designed to catalyze high-impact synergies, this initiative orchestrates a confluence of emergent intellect, avant-garde problem solvers, and disruptive innovators.</p>
-    <a href="transition2.html" class="button">Read More</a>
-</div>
-<div class="scrolling-container">
-    <div class="scrolling-text">Catalyzing high-impact synergies | Emergent intellect and avant-garde problem solvers | Disruptive innovators welcome!</div>
-</div>
-<div id="engagement" class="new-section">
-    <h2>Participant Engagement</h2>
-    <p>"Membership operates on a structured, high-value engagement model that transcends conventional ideation platforms. Here, participants are strategically positioned within an ecosystem that fosters intellectual capital exchange and optimized peer-to-peer alignment."</p>
-    <a href="transition2.html" class="button">Read More</a>
-</div>
-<div class="scrolling-container">
-    <div class="scrolling-text">Structured engagement model | Optimized peer-to-peer alignment | Sustained intellectual capital exchange</div>
-</div>
-<div id="why-us" class="new-section">
-    <h2>Why This Platform?</h2>
-    <p>"In a saturated landscape of passive conferences and static networking events, this emerges as an intelligence-driven, sentient market construct—a space where interactions are non-linear and organically evolving, designed to create long-term impact."</p>
-    <a href="transition2.html" class="button">Read More</a>
-</div>
-<div class="scrolling-container">
-    <div class="scrolling-text">Intelligence-driven market construct | Non-linear and organically evolving interactions | Long-term impact</div>
-</div>
-<div id="selection" class="new-section">
-    <h2>Selection & Exclusivity</h2>
-    <p>"Access is not transactional; it is a function of intellectual compatibility, behavioral metrics, and ecosystem-driven potential. This isn’t about mere participation—it’s about integration, evolution, and the sustained pursuit of collective excellence."</p>
-    <a href="transition2.html" class="button">Read More</a>
-</div>
-<div id="endorsement-supporters" class="new-section">
-    <h2>🌟 Endorsement & Visionary Supporters</h2>
-    <p>In alignment with and inspired by today's global leaders and innovators.</p>
-    <div class="supporters-scroll-wrapper">
-        <div class="supporters-scroll-track">
-            <!-- Existing Logos -->
-            <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google" class="supporter-logo">
-            <img src="https://www.mckinsey.com/favicon.ico" alt="McKinsey" class="supporter-logo">
-            <img src="https://www.pngplay.com/wp-content/uploads/3/White-Amazon-Logo-PNG-HD-Quality.png" alt="Amazon" class="supporter-logo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" class="supporter-logo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" class="supporter-logo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" class="supporter-logo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" class="supporter-logo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" class="supporter-logo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Indian_Space_Research_Organisation_Logo.svg/300px-Indian_Space_Research_Organisation_Logo.svg.png" alt="ISRO" class="supporter-logo">
-            <img src="https://www.pngplay.com/wp-content/uploads/10/United-Nations-Flag-Transparent-PNG.png" alt="UN Flag" class="supporter-logo">
-            <img src="https://play-lh.googleusercontent.com/g2kVhek-ITP-bC8swldZV1Q9-GXJAQRMcFZDw0uVxNu1Aa5lLk3l2uPMgQPHirslQrI" alt="Organization Logo" class="supporter-logo">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8Oco3BC-sxQadCEbKJm2dJ6uwQvHMPHpNlg&s" alt="Another Logo" class="supporter-logo">
-
-            <!-- Duplicate Logos for Continuous Scrolling -->
-            <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google" class="supporter-logo">
-            <img src="https://www.mckinsey.com/favicon.ico" alt="McKinsey" class="supporter-logo">
-            <img src="https://www.pngplay.com/wp-content/uploads/3/White-Amazon-Logo-PNG-HD-Quality.png" alt="Amazon" class="supporter-logo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" class="supporter-logo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" class="supporter-logo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" class="supporter-logo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" class="supporter-logo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" class="supporter-logo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Indian_Space_Research_Organisation_Logo.svg/300px-Indian_Space_Research_Organisation_Logo.svg.png" alt="ISRO" class="supporter-logo">
-            <img src="https://www.pngplay.com/wp-content/uploads/10/United-Nations-Flag-Transparent-PNG.png" alt="UN Flag" class="supporter-logo">
-            <img src="https://play-lh.googleusercontent.com/g2kVhek-ITP-bC8swldZV1Q9-GXJAQRMcFZDw0uVxNu1Aa5lLk3l2uPMgQPHirslQrI" alt="Organization Logo" class="supporter-logo">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8Oco3BC-sxQadCEbKJm2dJ6uwQvHMPHpNlg&s" alt="Another Logo" class="supporter-logo">
-        </div>
-    </div>
-    <!-- Read More Button -->
-    <div style="text-align: center; margin-top: 2rem;">
-        <a href="transition6.html" class="button">Read More</a>
-    </div>
-</div>
-<div id="call-to-action" class="new-section">
-  <button id="joinButton" class="button">
-    <img src="Calphark_logo.png"alt="Join Logo" style="width: 30px; height: 30px; vertical-align: middle; margin-right: 10px;">Join Calphark now
-</div>
-
-<div id="popup" class="popup">
-    <div class="popup-content">
-        <div id="popupMessage" class="popup-message">By continuing, I agree to Calphark Bylaws & Code of Conduct and Privacy Policy.</div>
-        <div style="margin-top: 1.5rem;">
-            <button id="yesButton" class="continue-btn">Yes</button>
-            <button id="noButton" class="continue-btn" style="background-color: #ff4d4d; color: #fff;">No</button>
-        </div>
-        <div style="margin-top: 1rem;">
-            <a href="terms.html" target="_blank" class="continue-btn" style="display: inline-block; text-align: center; background-color: #007bff; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Read Terms</a>
-        </div>
-    </div>
-</div>
-<!-- Timer Window Section -->
-<div id="timerWindow" class="timer-window">
-    <p>Redirecting in <span id="countdown">5</span> seconds...</p>
-</div>
-<div id="revealSection" class="new-section">
-    <h2>Checking System compatibility</h2>
-    <div class="loading-bar">
-        <div class="loading-bar-inner"></div>
-    </div>
-    <div id="eligibilityMessage" style="display:none;">
-        <h2 class="fade-in">You are about to enter the Calphark Inner Circle.</h2>
-    </div>
-</div>
-<footer>
-    <div class="footer-buttons">
-        <a href="https://t.me/NThelperbotbot" target="_blank" class="button">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram"> 🤖 Talk to Our Telegram Bot
-        </a>
-        <a href="https://t.me/panimalarNT" target="_blank" class="button">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram"> 📢 Join Our Telegram Channel
-        </a>
-        <!-- Add Terms and Conditions Button Here -->
-        <a href="transition_n.html" target="_blank" class="button">
-             📄 Terms and Conditions
-        </a>
-        <!-- Add WhatsApp Channel Button Here -->
-        <a href="transition4.html" target="_blank" class="button">
-             💬 Join our WhatsApp Channel
-        </a>
-    </div>
-    <p>Contact us: <a href="mailto:calphark@gmail.com">calphark@gmail.com or support@calphark.com</a></p>
-    <p>© 2025 Calphark. All rights reserved.</p>
-</footer>
-<!-- Prominent Button -->
-<a id="formLink" href="transition.html" target="_blank" class="button prominent-button">Register here</a>
-<script>
-    // Ensure the Join Button opens the popup
-    document.getElementById('joinButton').addEventListener('click', function () {
-        document.getElementById('popup').style.display = 'flex';
-    });
-
-    // Yes Button functionality: Proceed with the flow
-    document.getElementById('yesButton').addEventListener('click', function () {
-        document.getElementById('popup').style.display = 'none';
-        document.getElementById('revealSection').style.display = 'block';
-        setTimeout(function () {
-            // Show timer window
-            document.getElementById('timerWindow').style.display = 'block';
-            var countdown = 5; // Adjust the countdown duration as needed
-            var countdownElement = document.getElementById('countdown');
-            var timer = setInterval(function () {
-                countdown--;
-                countdownElement.textContent = countdown;
-                if (countdown <= 0) {
-                    clearInterval(timer);
-                    // Proceed to the next section or page
-                    document.querySelector('.prominent-button').style.display = 'block';
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'serif'],
+                        'sans': ['Plus Jakarta Sans', 'sans-serif']
+                    },
+                    colors: {
+                        'primary': '#13a4ec',
+                        'secondary': '#ff69b4',
+                        'background': '#f8faff',
+                        'text-primary': '#1a202c',
+                        'text-secondary': '#5a677d',
+                        'accent': '#e0f2fe',
+                        'futuristic-bg': '#0A0F1F',
+                        'futuristic-text': '#E2E8F0',
+                        'futuristic-accent': '#38BDF8'
+                    },
+                    animation: {
+                        'marquee': 'marquee 50s linear infinite',
+                        'float': 'float 25s linear infinite',
+                        'pulse-slow': 'pulse 4s infinite',
+                        'bounce-slow': 'bounce 3s infinite'
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-100%)' }
+                        },
+                        float: {
+                            '0%': { transform: 'translateY(0) rotate(0deg)', opacity: '1' },
+                            '100%': { transform: 'translateY(-1000px) rotate(720deg)', opacity: '0' }
+                        }
+                    }
                 }
-            }, 1000);
-        }, 5000); // Match the duration of the loading animation
-    });
+            }
+        }
+    </script>
+</head>
 
-    // No Button functionality: Cancel and redirect
-    document.getElementById('noButton').addEventListener('click', function () {
-        document.getElementById('popup').style.display = 'none';
-        alert('You have chosen not to agree to the terms. Redirecting...');
-        window.location.href = 'index.html'; // Replace with the desired redirect URL
-    });
-</script>
+<body class="font-sans bg-background text-text-primary">
+
+    <section class="slider-container h-screen">
+        <!-- Slide 1 -->
+        <div class="slide active">
+            <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" alt="Business Meeting" class="slide-image">
+            <div class="slide-overlay">
+                <div class="slide-content">
+                    <h1 class="slide-title">Welcome to Our Company</h1>
+                    <p class="slide-description">We provide innovative solutions for your business needs with cutting-edge technology and expert support.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 2 -->
+        <div class="slide">
+            <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" alt="Team Collaboration" class="slide-image">
+            <div class="slide-overlay">
+                <div class="slide-content">
+                    <h1 class="slide-title">Expert Team Solutions</h1>
+                    <p class="slide-description">Our experienced professionals work together to deliver exceptional results and drive your success forward.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 3 -->
+        <div class="slide">
+            <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" alt="Modern Office" class="slide-image">
+            <div class="slide-overlay">
+                <div class="slide-content">
+                    <h1 class="slide-title">Innovation & Growth</h1>
+                    <p class="slide-description">Transform your business with our modern approach and strategic insights for sustainable growth.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slider Indicators -->
+        <div class="slider-indicators">
+            <div class="indicator active" data-slide="0"></div>
+            <div class="indicator" data-slide="1"></div>
+            <div class="indicator" data-slide="2"></div>
+        </div>
+    </section>
+    <div class="relative flex min-h-screen flex-col overflow-x-hidden" id="app">
+        <!-- Modules will be loaded here -->
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+    <script>
+        // Module loader
+        async function loadModule(moduleName) {
+            try {
+                const response = await fetch(`modules/${moduleName}.html`);
+                if (!response.ok) throw new Error(`Failed to load ${moduleName}`);
+                return await response.text();
+            } catch (error) {
+                console.error(`Error loading module ${moduleName}:`, error);
+                return '';
+            }
+        }
+
+        // Load all modules in order
+        async function loadAllModules() {
+            const modules = ['header', 'events', 'about' , 'Our_Philosophy&Vision', 'whatwedo','Our_Philosophy&Vision2' ,'Calphark_Convergence' , 'partners', 'footer'];
+            const app = document.getElementById('app');
+            
+            for (const moduleName of modules) {
+                const moduleContent = await loadModule(moduleName);
+                if (moduleContent) {
+                    const tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = moduleContent;
+                    
+                    // Extract and append HTML content
+                    while (tempDiv.firstChild) {
+                        app.appendChild(tempDiv.firstChild);
+                    }
+                }
+            }
+        }
+
+        // Initialize all Swiper instances after modules load
+        function initializeAllSwipers() {
+            // Hero slider
+            if (document.querySelector('#hero-slider')) {
+                new Swiper("#hero-slider", {
+                    effect: "cards",
+                    // grabCursor: true,
+                    initialSlide: 1,
+                    speed: 5,
+                    loop: true,
+                    rotate: true,
+                    mousewheel: {
+                        invert: false,
+                    },
+                    autoplay: {
+                        delay: 40,
+                        disableOnInteraction: false,
+                    },
+                });
+            }
+
+            // About slider
+            if (document.querySelector('#about-slider')) {
+                new Swiper("#about-slider", {
+                    effect: "cards",
+                    grabCursor: true,
+                    initialSlide: 2,
+                    speed: 500,
+                    loop: true,
+                    rotate: true,
+                    mousewheel: {
+                        invert: false,
+                    },
+                    autoplay: {
+                        delay: 4000,
+                        disableOnInteraction: false,
+                    },
+                });
+            }
+        }
+        // Load modules then initialize swipers
+        async function initializeApp() {
+            await loadAllModules();
+            // Small delay to ensure DOM is fully rendered
+            setTimeout(initializeAllSwipers, 10);
+        }
+
+        // Initialize when DOM is ready
+        document.addEventListener('DOMContentLoaded', initializeApp);
+        
+        class HeroSlider {
+            constructor() {
+                this.slides = document.querySelectorAll('.slide');
+                this.indicators = document.querySelectorAll('.indicator');  
+                this.currentSlide = 0;
+                this.slideInterval = null;
+                
+                this.init();
+            }
+            
+            init() {
+                // Add click event listeners to indicators
+                this.indicators.forEach((indicator, index) => {
+                    indicator.addEventListener('click', () => {
+                        this.goToSlide(index);
+                        this.resetInterval();
+                    });
+                });
+                
+                // Start auto-slide
+                this.startAutoSlide();
+            }
+            
+            goToSlide(slideIndex) {
+                // Remove active class from current slide and indicator
+                this.slides[this.currentSlide].classList.remove('active');
+                this.indicators[this.currentSlide].classList.remove('active');
+                
+                // Update current slide index
+                this.currentSlide = slideIndex;
+                
+                // Add active class to new slide and indicator
+                this.slides[this.currentSlide].classList.add('active');
+                this.indicators[this.currentSlide].classList.add('active');
+            }
+            
+            nextSlide() {
+                const nextIndex = (this.currentSlide + 1) % this.slides.length;
+                this.goToSlide(nextIndex);
+            }
+            
+            startAutoSlide() {
+                this.slideInterval = setInterval(() => {
+                    this.nextSlide();
+                }, 5000); // Change slide every 5 seconds
+            }
+            
+            resetInterval() {
+                clearInterval(this.slideInterval);
+                this.startAutoSlide();
+            }
+        }
+        
+        // Initialize slider when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new HeroSlider();
+        });
+    </script>
 </body>
 </html>
